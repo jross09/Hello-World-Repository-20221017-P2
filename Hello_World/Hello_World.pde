@@ -26,13 +26,13 @@ if ( appWidth < appHeight ) { //Declare Landscape Mode
       print("Display Geoemtry is Good to Go.");
     } else {
       println("STOP, is broken");
-    
-  }
+    }
+}
 //
 //If ORIENTATION is wrong... feedback to change it
 //if ( orientation==p ) println(instructs);
 //
-//End setup
+} //End setup
 //
 void draw() {
   circle(370, 350, 300);
@@ -41,6 +41,13 @@ void draw() {
   circle(325, 395, 75);
   circle(340, 320, 20);
   circle(325, 395, 20);
+  circle(400, 370, 50);
+  circle(500, 450, 50);
+  circle(515, 300, 50);
+  circle(350, 500, 50);
+  circle(350, 200, 50);
+
+
 } //End draw
 //
 void keyPressed() {} //End keyPressed
