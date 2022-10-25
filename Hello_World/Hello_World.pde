@@ -1,9 +1,10 @@
 //Global Variables
 int appWidth, appHeight;
+float centerHeight, centerWidth, xStart, yStart, widthRect, heightRect;
 //
 void setup() {
 //Declare Display Geometry:square, landscape, portrait
-size(700, 700);
+size(700, 400);
 //fullScreen(); //Use fullScreen for easy deployment
 appWidth = width;
 appHeight = height;
@@ -27,27 +28,18 @@ if ( appWidth < appHeight ) { //Declare Landscape Mode
     } else {
       println("STOP, is broken");
     }
-}
-//
-//If ORIENTATION is wrong... feedback to change it
-//if ( orientation==p ) println(instructs);
-//
+  }
+  //Population
+  centerWidth = width * 1/2;
+  centerHeight = height * 1/2;
+  xStart = centerWidth - (width * 1/4);
+  yStart = centerHeight - (height * 1/4);
+  widthRect = width * 1/2;
+  heightRect = height * 1/2;
 } //End setup
 //
 void draw() {
-  circle(370, 350, 300);
-  circle(350, 350, 200);
-  circle(340, 320, 75);
-  circle(325, 395, 75);
-  circle(340, 320, 20);
-  circle(325, 395, 20);
-  circle(400, 370, 50);
-  circle(500, 450, 50);
-  circle(515, 300, 50);
-  circle(350, 500, 50);
-  circle(350, 200, 50);
-
-
+  rect(xStart, yStart, widthRect, heightRect);
 } //End draw
 //
 void keyPressed() {} //End keyPressed
