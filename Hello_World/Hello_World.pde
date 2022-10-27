@@ -1,6 +1,7 @@
 //Global Variables
 int appWidth, appHeight;
 float centerHeight, centerWidth, xStart, yStart, widthRect, heightRect;
+color black=#000000, white=#FFFFFF, pink=#FA05B5, green=#05FA2B;
 //
 void setup() {
 //Declare Display Geometry:square, landscape, portrait
@@ -39,7 +40,17 @@ if ( appWidth < appHeight ) { //Declare Landscape Mode
 } //End setup
 //
 void draw() {
+  background(225); //Grey Scale 0-255
+  //random(a, b)
+  background( color( random(0, 255), random(255), random(0, 15) ) ); //colour (r,g,b), Night Mode, Casting
+  //Night Mode
+  background (black);
+  // 
+  stroke(green);
+  fill(pink);
   rect(xStart, yStart, widthRect, heightRect);
+  fill(white);// Reset default
+  stroke(black);// Reset default
 } //End draw
 //
 void keyPressed() {} //End keyPressed
