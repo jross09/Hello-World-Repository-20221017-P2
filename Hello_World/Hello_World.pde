@@ -30,10 +30,10 @@ if ( appWidth < appHeight ) { //Declare Landscape Mode
     }
   }
   //Population
-  centerWidth = width * 1/2;
-  centerHeight = height * 1/2;
-  xStart = centerWidth - (width * 1/4);
-  yStart = centerHeight - (height * 1/4);
+  centerWidth = appWidth * 1/2;
+  centerHeight = appHeight * 1/2;
+  xStart = centerWidth - (appWidth * 1/4);
+  yStart = centerHeight - (appHeight * 1/4);
   widthRect = width * 1/2;
   heightRect = height * 1/2;
 } //End setup
