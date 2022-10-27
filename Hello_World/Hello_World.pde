@@ -2,6 +2,8 @@
 int appWidth, appHeight;
 float centerHeight, centerWidth, xStart, yStart, widthRect, heightRect;
 color black=#000000, white=#FFFFFF, pink=#FA05B5, green=#05FA2B;
+color greenNightMode=#05FA00, pinkNightMode=#FA0500;
+float thick, thin;
 //
 void setup() {
 //Declare Display Geometry:square, landscape, portrait
@@ -35,8 +37,10 @@ if ( appWidth < appHeight ) { //Declare Landscape Mode
   centerHeight = appHeight * 1/2;
   xStart = centerWidth - (appWidth * 1/4);
   yStart = centerHeight - (appHeight * 1/4);
-  widthRect = width * 1/2;
-  heightRect = height * 1/2;
+  widthRect = appWidth * 1/2;
+  heightRect = appHeight * 1/2;
+  thick = appWidth * 1/70;
+  thin = appWidth * 1/140;
 } //End setup
 //
 void draw() {
@@ -46,11 +50,13 @@ void draw() {
   //Night Mode
   background (black);
   // 
-  stroke(green);
-  fill(pink);
+  strokeWeight(thick);//noStroke()
+  stroke(green); //greenNightMode
+  fill(pink); //pinkNightMode
   rect(xStart, yStart, widthRect, heightRect);
   fill(white);// Reset default
   stroke(black);// Reset default
+  strokeWeight(1);// Reset default
 } //End draw
 //
 void keyPressed() {} //End keyPressed
