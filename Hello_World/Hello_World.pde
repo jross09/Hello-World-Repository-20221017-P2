@@ -4,7 +4,7 @@ float centerHeight, centerWidth, xStart, yStart, widthRect, heightRect;
 color black=#000000, white=#FFFFFF, pink=#FA05B5, green=#05FA2B;
 color greenNightMode=#05FA00, pinkNightMode=#FA0500;
 float thick, thin;
-Boolean grayscale=false, randomColor=false, blackBackground=false, nightMode=false;
+Boolean grayScale=false, randomColor=false, blackBackground=false, nightMode=false;
 //
 void setup() {
 //Declare Display Geometry:square, landscape, portrait
@@ -69,7 +69,12 @@ void draw() {
   strokeWeight(1);
 } //End draw
 //
-void keyPressed() {} //End keyPressed
+void keyPressed() {
+  if ( key=='A'|| key=='a') grayScale= true;
+  if ( key=='S'|| key=='s') randomColor= true;
+  if ( key=='W'|| key=='w') blackBackground=true;
+
+} //End keyPressed
 //
 void mousePressed() {}//End mousePressed
 //
