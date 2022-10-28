@@ -1,18 +1,26 @@
 //Global Variables
-Boolean nightMode=false;
+Boolean nightMode=false, ahhh=false;
 //
 void setup() {}//End setup
 //
 void draw() {
-  if ( nightMode==true)println ("I am nocturnal");
-  if (nightMode==false) println ("");
+  if ( nightMode==true) println("I am nocturnal.");
+  if ( nightMode==false) println("");
+  if ( ahhh==true) println("Where is the button");
 }//End draw
 //
 void keyPressed() {
-  if ( key=='N' || key=='n' ) nightMode=true;
-  if ( key==CODED && keyCode==LEFT ) nightMode=false;
+ 
 }//End keyPressed
 //
-void mousePressed() {}//End mousePressed
+void mousePressed() {
+  if ( mouseButton == LEFT ) nightMode = true;
+  if ( mouseButton == RIGHT ) nightMode = false;
+  if ( mouseButton == CENTER ) {
+  ahhh = true;
+  } else {
+  ahhh = false;
+  }
+}//End mousePressed
 //
 //End Main Program
