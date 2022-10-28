@@ -70,12 +70,18 @@ void draw() {
 } //End draw
 //
 void keyPressed() {
+  grayScale = false;
+  randomColor = false;
+  blackBackground = false;
   if ( key=='A'|| key=='a') grayScale= true;
   if ( key=='S'|| key=='s') randomColor= true;
   if ( key=='W'|| key=='w') blackBackground=true;
 
 } //End keyPressed
 //
-void mousePressed() {}//End mousePressed
+void mousePressed() {
+if ( mouseButton == LEFT ) nightMode=true;
+if ( mouseButton == RIGHT ) nightMode=false;
+}//End mousePressed
 //
 //End Main Program
