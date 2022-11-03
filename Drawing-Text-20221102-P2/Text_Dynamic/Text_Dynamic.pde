@@ -3,10 +3,11 @@
 //Display Algorithm, see https://github.com/MercersKitchen/Sandbox-Hello-World220221017-P2/blob/main/Hello_World%20IfElse/Hello_World.pde
 
 //Global Variables
-int appWidth, appHeight, fontSize;
+int appWidth, appHeight, fontSize, feetX;
 float titleX, titleY, titleWidth, titleHeight;
 float footerX, footerY, footerWidth, footerHeight;
-String title = "Wahoo!", footer="Drip";
+float feetX, feetY, feetWidth, feetHeight;
+String title = "Wahoo!", footer="Drip", feet="t swizzle";
 PFont titleFont;
 color purple=#2C08FF, resetDefaultInk=#FFFFFF; //not Night Mode Friendly
 //
@@ -19,11 +20,12 @@ void setup() {
   appHeight = height;
   //
   //Population
-  titleX = footerX = appWidth * 1/4;
+  titleX = footerX = appWidth  = feetX = feetWidth * 1/4;
   titleY = appHeight * 1/10;
-  footerY = appHeight * 9/10;
+  footerY = appHeight * 8/10;
   titleWidth = footerWidth = appWidth * 1/2;
   titleHeight = footerHeight = appHeight * 1/10;
+  
   //
   //Text Setup, single executed code
   //Fonts from OS (Operating System)
@@ -34,7 +36,8 @@ void setup() {
   //
   //Layout or text space and typographical features
   rect(titleX, titleY, titleWidth, titleHeight);
-  rect(footerX, footerY, footerWidth, footerHeight)
+  rect(footerX, footerY, footerWidth, footerHeight);
+  rect(feetX, feetY, feetWidth, feetHeight);
   //
 }//End setup
 //
@@ -46,19 +49,23 @@ textAlign(CENTER, CENTER);
 fontSize = 50; //Largest size given window
 textFont(titleFont, fontSize);
 text( title, titleX, titleY, titleWidth, titleHeight);
-text( footer, titleX, titleY, titleWidth, titleHeight);
+textAlign(CENTER, BOTTOM);
+//Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
+text( footer, footerX, footerY, footerWidth, footerHeight);
 fill(resetDefaultInk);
+textAlign(CENTER, BOTTOM);
+//Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
+text ( feet, feetX, feetY, feetWidth, feetHeight);
+fill(resetDefaultInk);
+textAlign(CENTER, CENTER);
 }//End draw
 //
-void keyPressed() {
-}//End keyPressed
+void keyPressed() {}//End keyPressed
 //
-void mousePressed() {
-}//End mousePressed
+void mousePressed() {}//End mousePressed
 //
 //End Main Program
 
-//Population
 
 
   
