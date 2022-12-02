@@ -2,13 +2,13 @@
 int appWidth, appHeight, fontSize;
 float titleX, titleY, titleWidth, titleHeight;
 float footerX, footerY, footerWidth, footerHeight;
-String title = "Wahoo!", footer="Drip";
+String title = "Sheep!", footer="Farm";
 PFont titleFont;
-color purple=#2C08FF, resetDefaultInk=#FFFFFF; //not Night Mode Friendly
+color cyan=#3BCCFF, resetDefaultInk=#FFFFFF; //not Night Mode
 //
 void setup()
 {
-  size(500, 600); //Portrait
+  size(800, 1000); //Portrait
   //Copy Display Algorithm
   //Concatenation
   println("\t\t\tWidth="+width, "\tHeight="+height); //key variables
@@ -48,7 +48,7 @@ void setup()
   //Fonts from OS (Operating System)
   String[] fontList = PFont.list(); //To list all fonts available
   printArray(fontList); //For listing all possible fonts to choose from, then createFont
-  titleFont = createFont("Harrington", 55); //Verified the font exists in Processing.JAVA
+  titleFont = createFont("Ravie", 48); //Verified the font exists in Processing.JAVA
   // Tools / Create Font / Find Font / Do not press "OK", known bug
   //
   //Layout or text space and typographical features
@@ -59,7 +59,7 @@ void setup()
 //
 void draw() {
   //Repeated Executed Code
-  fill(purple);
+  fill(cyan);
   textAlign(CENTER, CENTER);
   //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
   fontSize = 50; //Largest size given window
