@@ -1,7 +1,4 @@
-//To Do List
-//Discussion about Font is too big (white space on top of font
-//Display Algorithm, see https://github.com/MercersKitchen/Sandbox-Hello-World220221017-P2/blob/main/Hello_World%20IfElse/Hello_World.pde
-
+//MR MERCER NOTES
 //Global Variables
 int appWidth, appHeight, fontSize;
 float titleX, titleY, titleWidth, titleHeight;
